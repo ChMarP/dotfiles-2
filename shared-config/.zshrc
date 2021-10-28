@@ -170,7 +170,7 @@ alias polyscr='nvim $HOME/.config/polybar/scripts'
 alias kbinds='nvim $HOME/.config/sxhkd/sxhkdrc'
 
 # rices.sh config
-alias rices='nvim $DOTFILES/setup-scripts/rices.sh'
+alias rices='cd $DOTFILES/rices'
 
 # ---------------------------------------- Modification ----------------------------------------
 

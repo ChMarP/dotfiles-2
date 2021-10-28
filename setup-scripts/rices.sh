@@ -62,6 +62,7 @@ function setup_config {
 shopt -s nocasematch
 case "$arg" in 
     "gruvbox" ) setup_config "Gruvbox" ;; 
+    "gruvbox-material" ) setup_config "GruvboxMaterial" ;; 
     "solarized-dark" ) setup_config "SolarizedDark" ;; 
     "pink-nord-alternative" ) setup_config "PinkNordAlternative" ;; 
     "pink-nord" ) setup_config "PinkNord" ;; 
