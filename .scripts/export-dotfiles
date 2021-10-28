@@ -157,6 +157,11 @@ cp $HOME/.config/Code\ -\ OSS/{Cookies,Cookies-journal,languagepacks.json,machin
 mkdir -p $theme_config/Code\ -\ OSS/User &> /dev/null
 cp $HOME/.config/Code\ -\ OSS/User/{keybindings.json,settings.json,syncLocalSettings.json} $theme_config/Code\ -\ OSS/User
 
+mkdir $theme_config/Code &> /dev/null
+cp $HOME/.config/Code/{Cookies,Cookies-journal,languagepacks.json,machineid,rapid_render.json,storage.json,TransportSecurity} $theme_config/Code
+mkdir -p $theme_config/Code/User &> /dev/null
+cp $HOME/.config/Code/User/{keybindings.json,settings.json,syncLocalSettings.json} $theme_config/Code
+
 
 [ -d $theme_dir/.oh-my-zsh/additional ] || mkdir -p $theme_dir/.oh-my-zsh/additional
 cp -r $HOME/.oh-my-zsh/additional $theme_dir/.oh-my-zsh
