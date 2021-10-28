@@ -97,7 +97,7 @@ let mapleader=" "
 call plug#begin()
 
 " Languages support
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim'
 Plug 'zodd18/vim-ocl'
 
 " Functionalities
@@ -105,7 +105,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'chrisbra/colorizer'
 Plug 'miyakogi/sidepanel.vim'
 Plug 'preservim/nerdtree'
-Plug 'andymass/vim-matchup'
+"Plug 'andymass/vim-matchup'
 
 " Theming
 Plug 'vim-airline/vim-airline'
@@ -119,6 +119,8 @@ Plug 'lifepillar/vim-gruvbox8'
 Plug 'sainnhe/gruvbox-material'
 Plug 'lifepillar/vim-solarized8'
 Plug 'arcticicestudio/nord-vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'kevinoid/vim-jsonc'
 
 call plug#end()
 

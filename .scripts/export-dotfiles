@@ -11,7 +11,7 @@ then
     cp $HOME/.config/fish/{config.fish,fish_variables} $DOTFILES/shared-config/.config/fish
 
     # zsh
-    cp -r $HOME/{.zshrc,.oh-my-zsh} $DOTFILES/shared-config &> /dev/null
+    cp -r $HOME/{.zshrc,.oh-my-zsh,.p10k.zsh} $DOTFILES/shared-config &> /dev/null
 
     # kitty
     cp -r $HOME/.config/kitty/kitty.conf $DOTFILES/shared-config/.config/kitty

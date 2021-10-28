@@ -55,3 +55,6 @@
 [submodule "rices/Dracula"]
 	path = rices/Dracula
 	url = https://github.com/zodd18/Dracula.git
+[submodule "rices/GruvboxMaterial"]
+	path = rices/GruvboxMaterial
+	url = https://github.com/zodd18/GruvboxMaterial.git

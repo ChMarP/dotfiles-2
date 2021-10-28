@@ -3,8 +3,8 @@
 #
 
 # terminal emulator
-ctrl + alt + t
-	kitty -e zsh -c "$HOME/.config/neofetch/launch-neofetch.sh ; zsh"
+super + Return
+	kitty -e zsh -c "~/.config/neofetch/launch-neofetch.sh ; zsh"
 
 # filemanager
 super + e
@@ -22,9 +22,9 @@ super + alt + c
 ctrl + alt + p
     ~/.config/polybar/scripts/restart-polybar.sh
 
-# open downloads folder
+# rofi 
 super + d
-	nautilus ~/Downloads
+	rofi -modi drun -show drun -width 5
 
 # ranger screenshots
 shift + super + i
@@ -74,10 +74,6 @@ super + Print
 # screenshot (region)
 super + shift + S
     import /tmp/screenshot.png && cat /tmp/screenshot.png | xclip -sel clip -t image/png
-
-# rofi 
-super + Return 
-    $HOME/.config/rofi/launch-rofi.sh
 
 # system shutdown
 super + alt + t
