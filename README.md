@@ -31,6 +31,12 @@ Here are some details about my setup:
 
 <br/><br/>
 
+## [🌲 Forest](https://github.com/zodd18/Forest)
+![alt text](https://github.com/zodd18/Forest/blob/master/screenshot.png) 
+
+
+<br/><br/>
+
 ## [🌴 Gruvbox](https://github.com/zodd18/Gruvbox)
 ![alt text](https://github.com/zodd18/Gruvbox/blob/master/screenshot.png) 
 
@@ -128,12 +134,15 @@ may be:
 
 ```
 nord                    - Classic Nord look
+dracula                 - Classic Dracula theme
 pink-nord               - Pink Nord look
 pink-nord-alternative   - Based on Fleon look
 gruvbox                 - Classic Gruvbox look
+gruvbox-material        - Soft edition of Gruvbox theme
 solarized-dark          - Solarized Dark look
 horizon                 - Based on VS Code Horizon Theme
 doombox                 - Doom version of gruvbox
+forest                  - Forest look
 ```
 
 example:
@@ -146,9 +155,3 @@ setup.sh all pink-nord
 ### Recomendation
 You can try to install all at once by using "all" argument, however I'd install it one by one in case any installation fails. 
 I'd follow this order: pacman, aur, themes, rice.
-
-# Deprecated (old rices, these need a lot of cleaning)
-```
-dracula                 - Classic Dracula look
-```
-
