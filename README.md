@@ -1,4 +1,4 @@
-![alt text](readme-resources/dotfiles.png)
+![alt text](readme-resources/dotfiles_.png)
 
 ### Hello there! :octocat:
 
@@ -23,7 +23,7 @@ Here are some details about my setup:
 
 <br/><br/><br/>
 
-![alt text](readme-resources/themes.png)
+![alt text](readme-resources/themes_.png)
 
 ## [🍁 Horizon](https://github.com/zodd18/Horizon)
 ![alt text](https://github.com/zodd18/Horizon/blob/master/screenshot.png) 
@@ -69,7 +69,7 @@ Here are some details about my setup:
 # Custom Theme Swap Utility
 
 ## Click the brush icon
-![alt text](./screenshots/brush_.jpg)
+![alt text](./screenshots/brush.jpg)
 
 ## Choose the rice that you desire
 ![alt text](screenshots/theme-swap-showcase.png)
@@ -79,7 +79,7 @@ Here are some details about my setup:
 
 <br/><br/>
 
-![alt text](readme-resources/scripts.png)
+![alt text](readme-resources/scripts_.png)
 
 ## [WARNING]: Installation scripts are still work in progress. Use them at your own risk!!
 ### [WARNING!]: These are my personal config files, executing these scripts will overwrite several files in your system, only execute these in case you have a backup of your files.
