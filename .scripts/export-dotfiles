@@ -160,7 +160,7 @@ cp $HOME/.config/Code\ -\ OSS/User/{keybindings.json,settings.json,syncLocalSett
 mkdir $theme_config/Code &> /dev/null
 cp $HOME/.config/Code/{Cookies,Cookies-journal,languagepacks.json,machineid,rapid_render.json,storage.json,TransportSecurity} $theme_config/Code
 mkdir -p $theme_config/Code/User &> /dev/null
-cp $HOME/.config/Code/User/{keybindings.json,settings.json,syncLocalSettings.json} $theme_config/Code
+cp $HOME/.config/Code/User/{keybindings.json,settings.json,syncLocalSettings.json} $theme_config/Code/User
 
 
 [ -d $theme_dir/.oh-my-zsh/additional ] || mkdir -p $theme_dir/.oh-my-zsh/additional

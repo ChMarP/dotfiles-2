@@ -11,7 +11,7 @@ $HOME/.scripts/custom-autostart
 xsetroot -cursor_name left_ptr &
 sxhkd &
 #nm-applet &
-compton &
+picom --experimental-backends &
 nitrogen --restore
 #polybar example &
 wmname LG3D &
