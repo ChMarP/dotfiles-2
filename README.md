@@ -21,7 +21,7 @@ Here are some details about my setup:
 - **File Manager**                 : [Thunar](https://wiki.archlinux.org/index.php/Thunar) :bookmark: customized sidebar & icon!
 - **Text Editor**                  : [nvim](https://github.com/neovim/neovim) :computer:
 
-<br/><br/><br/>
+<br/>
 
 ![alt text](readme-resources/themes_.png)
 
@@ -77,7 +77,6 @@ Here are some details about my setup:
 ## Nice! Now you have a completely look and feel for your Linux desktop!
 ![alt text](screenshots/theme-swap-showcase-2.png)
 
-<br/><br/>
 
 ![alt text](readme-resources/scripts_.png)
 
