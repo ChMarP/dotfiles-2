@@ -21,8 +21,6 @@ Here are some details about my setup:
 - **File Manager**                 : [Thunar](https://wiki.archlinux.org/index.php/Thunar) :bookmark: customized sidebar & icon!
 - **Text Editor**                  : [nvim](https://github.com/neovim/neovim) :computer:
 
-<br/>
-
 ![alt text](readme-resources/themes_.png)
 
 ## [🍁 Horizon](https://github.com/zodd18/Horizon)
@@ -69,7 +67,7 @@ Here are some details about my setup:
 # Custom Theme Swap Utility
 
 ## Click the brush icon
-![alt text](./screenshots/brush.jpg)
+![alt text](./screenshots/brush_.jpg)
 
 ## Choose the rice that you desire
 ![alt text](screenshots/theme-swap-showcase.png)
