@@ -67,7 +67,7 @@ Here are some details about my setup:
 # Custom Theme Swap Utility
 
 ## Click the brush icon
-![alt text](./screenshots/brush.jpg)
+![alt text](./screenshots/brush.png)
 
 ## Choose the rice that you desire
 ![alt text](screenshots/theme-swap-showcase.png)
