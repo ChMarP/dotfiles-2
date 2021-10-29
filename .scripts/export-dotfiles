@@ -165,6 +165,7 @@ cp $HOME/.config/Code/User/{keybindings.json,settings.json,syncLocalSettings.jso
 
 [ -d $theme_dir/.oh-my-zsh/additional ] || mkdir -p $theme_dir/.oh-my-zsh/additional
 cp -r $HOME/.oh-my-zsh/additional $theme_dir/.oh-my-zsh
+cp ~/.p10k.zsh $theme_dir
 
 cp -r $HOME/.config/gtk-3.0 $theme_config
 cp -r $HOME/.config/gtk-2.0 $theme_config

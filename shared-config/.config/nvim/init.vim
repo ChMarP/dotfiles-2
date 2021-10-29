@@ -12,6 +12,7 @@ set encoding=UTF-8
 set undofile
 set relativenumber
 set nu rnu
+autocmd BufEnter * lcd %:p:h
 
 " TAB {
 
@@ -131,7 +132,7 @@ call plug#end()
 " NERDTree {
 
 " Toggle
-nnoremap <C-s> :call NERDTreeToggleInCurDir()<cr>
+nnoremap <C-s> :NERDTreeToggle<cr>
 
 " Set position (left or right) if neccesary (default: "left").
 let g:sidepanel_pos = "left"
@@ -196,18 +197,6 @@ source $HOME/.config/nvim/colorscheme.vim
 
 " Functions {
 
-function! NERDTreeToggleInCurDir()
-  " If NERDTree is open in the current buffer
-  if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
-    exe ":NERDTreeClose"
-  else
-    if (expand("%:t") != '')
-      exe ":NERDTreeFind"
-    else
-      exe ":NERDTreeToggle"
-    endif
-  endif
-endfunction
 
 " }
 

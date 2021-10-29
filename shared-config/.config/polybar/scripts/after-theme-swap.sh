@@ -19,6 +19,13 @@ function restart_applications {
         killall bspwmrc 
         #killall bspswallow
 
+        # Some default bspwm config (can be overriden by ~/.config/bspwm/autostart)
+        bspc config window_gap          20
+        bspc config split_ratio          0.6
+        bspc config borderless_monocle   true
+        bspc config gapless_monocle      true
+        bspc config single_monocle       false
+
         $HOME/.config/bspwm/autostart &
         xsetroot -cursor_name left_ptr &
         picom &

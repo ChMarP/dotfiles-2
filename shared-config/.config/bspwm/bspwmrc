@@ -28,9 +28,10 @@ nohup pidof $HOME/.scripts/bspswallow || $HOME/.scripts/bspswallow &
 # Workspaces
 
 bspc config window_gap          20
-bspc config split_ratio          0.52
+bspc config split_ratio          0.6
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+bspc config single_monocle       false
 $HOME/.config/bspwm/autostart
 
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
