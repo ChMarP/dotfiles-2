@@ -12,6 +12,9 @@ set encoding=UTF-8
 set undofile
 set relativenumber
 set nu rnu
+set mouse=a
+
+" Current directory = opened file directory
 autocmd BufEnter * lcd %:p:h
 
 " TAB {

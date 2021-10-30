@@ -2,6 +2,13 @@
 # CUSTOM hotkeys
 #
 
+# --------- SXHKD (SHORTCUTS MANAGER) ---------
+# sxhkd reload keybindings:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# --------- GENERAL APPS ---------
+
 # terminal emulator
 super + Return
 	kitty -e zsh -c "~/.config/neofetch/launch-neofetch.sh ; zsh"
@@ -10,21 +17,27 @@ super + Return
 super + e
     nautilus 
 
-# update
-super + u
-    bspc rule -a \* -o state=floating && kitty -e $SHELL -c "figlet update... && sudo pacman -Syu"
-
-# class name
-super + alt + c
-    notify-send "$(xprop | grep 'CLASS')"
-
-# restart polybar
+# launch/restart polybar
 ctrl + alt + p
     ~/.config/polybar/scripts/restart-polybar.sh
 
 # rofi 
 super + d
 	rofi -modi drun -show drun -width 5
+
+
+# --------- FUNCTIONALITIES ---------
+
+# pacman update
+super + u
+    bspc rule -a \* -o state=floating && kitty -e $SHELL -c "figlet update... && sudo pacman -Syu"
+
+# get window's class name
+super + alt + c
+    notify-send "$(xprop | grep 'CLASS')"
+
+
+# --------- RANGER (TERMINAL FILE MANAGER) ---------
 
 # ranger screenshots
 shift + super + i
@@ -63,6 +76,8 @@ ctrl + alt + i
 ctrl + alt + c
     code
 
+# --------- SCREENSHOTS ---------
+
 # screenshot (entire screen)
 Print
     scrot $HOME/Pictures/Screenshots/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'
@@ -79,16 +94,13 @@ super + shift + S
 super + alt + t
     ~/.config/polybar/scripts/theme-swap.sh
 
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
-
 # spotify
 #ctrl + alt + s
 #    bspc desktop -f '^8' --follow ; spotify
 
-# AUDIO (pulsemixer)
-# pulsemixer
+# --------- PULSEMIXER (AUDIO MANAGER) ---------
+
+# open pulsemixer
 ctrl + alt + v
     bspc rule -a \* -o state=floating ; pavucontrol # kitty -e /bin/zsh -c pulsemixer
 
@@ -104,11 +116,18 @@ super + F7
 super + F5
 	pulsemixer --toggle-mute
 
-# ------------------------------------------------------------------------
 
-#
-# bspwm hotkeys
-#
+# --------- DUNST (NOTIFICATION MANAGER) ---------
+
+# close all notifications
+super + space
+    dunstctl close-all
+
+# notifications history
+super + shift + Escape
+    dunstctl history-pop
+
+# ----------------------- BSPWM HOTKEYS -----------------------
 
 # system shutdown
 super + alt + s
@@ -236,4 +255,5 @@ super + {Left,Down,Up,Right}
 
 #super + shift + g : {plus,minus}
     #bspc config window_gap $(( $(bspc config window_gap) {+,-} 5 ))
+
 
