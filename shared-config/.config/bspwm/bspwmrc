@@ -8,12 +8,11 @@
 
 $HOME/.scripts/custom-autostart
 
+#nm-applet &
 xsetroot -cursor_name left_ptr
 sxhkd &
-#nm-applet &
 picom --experimental-backends &
 nitrogen --restore
-#polybar example &
 wmname LG3D &
 lxpolkit &
 xset -dpms s off & # disable screen blanking
@@ -23,7 +22,8 @@ nautilus --gapplication-service &
 
 # Swallow
 
-nohup pidof $HOME/.scripts/bspswallow || $HOME/.scripts/bspswallow &
+#nohup pidof $HOME/.scripts/bspswallow || $HOME/.scripts/bspswallow &
+pgrep bspswallow || nohup ~/.scripts/bspswallow &
 
 # Workspaces
 
@@ -34,7 +34,7 @@ bspc config gapless_monocle      true
 bspc config single_monocle       false
 $HOME/.config/bspwm/autostart
 
-# bspc rule -a Gimp desktop='^8' state=floating follow=on
+# Default state/workspace for applications
 bspc rule -a Chromium desktop='^2'
 bspc rule -a discord desktop='^7'
 bspc rule -a mplayer2 state=floating
@@ -46,13 +46,19 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc config pointer_modifier mod4
 
-sleep 0.69
-$(sleep 2 && $HOME/.config/polybar/scripts/launch-polybar.sh) &
+#sleep 0.69
 
 # Autostart applications:
+
+# Start Polybar
+$($HOME/.config/polybar/scripts/restart-polybar.sh) &
+
+# Start floating kitty terminal
 bspc rule -a \* -o state=floating && sleep 0.015 ; kitty -e $SHELL -c "$HOME/.config/neofetch/launch-neofetch.sh && $SHELL" &
 
-sleep 0.55 
+sleep 1.55 
+
+# Start firefox
 /bin/bash -c "bspc desktop -f '^2' --follow ; bspc rule -a \* -o node=@$(bspc query -D -d):.focused split_dir=south follow=off ; firefox file:///home/$USER/.config/startpage/index.html &" &
 bspc desktop -f '^2' --follow &
 

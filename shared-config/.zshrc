@@ -178,6 +178,9 @@ alias r='ranger'
 alias z='zathura'
 alias j='java -jar'
 alias y='yay'
+alias g='git'
+alias l='exa --icons -la'
+alias ls='exa --icons'
 
 # ~/.zshrc
 alias aliases='nvim $HOME/.zshrc'
@@ -196,6 +199,9 @@ alias polyscr='nvim $HOME/.config/polybar/scripts'
  
 # sxhkd config
 alias kbinds='nvim $HOME/.config/sxhkd/sxhkdrc'
+
+# kitty config
+alias kittyrc='nvim $HOME/.config/kitty/colorscheme.conf'
 
 # rices.sh config
 alias rices='cd $DOTFILES/rices'
@@ -248,7 +254,7 @@ alias packages='expac -s "%-45n %m" -H M | sort -rhk 2 | nvim'
 alias classname="xprop | grep 'CLASS'"
 
 # git add, git commit, git push all my rices
-alias upload-all-rices="cd $DOTFILES/rices && find * -maxdepth 0 -type d -exec upload-rice '{}' ';'"
+alias upload-all-rices="cd $DOTFILES/rices && find * -maxdepth 0 -type d -exec upload-rice '{}' $1 ';'"
 
 # ---------------------------------------- Showcase ----------------------------------------
 
@@ -313,3 +319,5 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[ -f ~/.dircolors ] && eval "$(dircolors ~/.dircolors)";

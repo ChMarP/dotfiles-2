@@ -16,10 +16,8 @@ new=0
 [ ! -d .git ] && git init && git remote add origin "https://github.com/zodd18/$theme_name"
 
 git add * 
-#git add ./.* 
-git add ./.
-[ -z $commit_msg ] && git commit -m "Minor changes" || git commit -m "$commit_msg"
-
+git add .
+([ -z $commit_msg ] && git commit -m "Minor changes") || git commit -m "$commit_msg"
 git push
 
 if [[ $new -eq 1 || $* == *--submodule* || $* == -*submodule* ]];

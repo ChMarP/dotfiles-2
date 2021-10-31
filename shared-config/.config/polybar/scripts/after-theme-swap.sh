@@ -4,10 +4,10 @@ function restart_applications {
     config_name=$1
 
     # ------ kill applications ------
-    killall -9 polybar &
-    killall dunst &
-    killall -9 compton &
-    killall -9 picom &
+    killall -9 polybar
+    killall dunst
+    killall -9 compton
+    killall -9 picom
      
     # ------ restart applications ------
     nitrogen --restore
@@ -17,7 +17,7 @@ function restart_applications {
     then
         killall bspc 
         killall bspwmrc 
-        #killall bspswallow
+        killall bspswallow
 
         # Some default bspwm config (can be overriden by ~/.config/bspwm/autostart)
         bspc config window_gap          20
@@ -28,10 +28,12 @@ function restart_applications {
 
         $HOME/.config/bspwm/autostart &
         xsetroot -cursor_name left_ptr &
-        picom &
+        picom --experimental-backends &
         nitrogen --restore &
         dunst &
-        nohup pidof $HOME/.scripts/bspswallow || $HOME/.scripts/bspswallow &
+        #nohup pidof $HOME/.scripts/bspswallow || $HOME/.scripts/bspswallow &
+        
+        pgrep bspswallow || nohup ~/.scripts/bspswallow &
         $HOME/.config/bspwm/autostart &
 
         cp $HOME/.config/polybar/config.bspwm $HOME/.config/polybar/config

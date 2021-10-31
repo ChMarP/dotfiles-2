@@ -5,6 +5,7 @@ function change_theme {
     current_theme=`cat ~/.config/current_theme`
     chosen=$1
     [[ $chosen == $current_theme ]] && notify-send -i ~/.config/polybar/scripts/resources/white-brush.png "[WARNING]: You are already using this theme!" && return 1
+    killall -9 after-theme-swap
 
     nohup $SHELL -c "cd $DOTFILES && $DOTFILES/setup-scripts/rices.sh $chosen ; ~/.config/polybar/scripts/after-theme-swap.sh"
 }
