@@ -51,7 +51,7 @@ then
     cp -r $HOME/.config/rofi/config $DOTFILES/shared-config/.config/rofi
 
     # thunar
-    cp $HOME/.config/thunar $DOTFILES/shared-config/.config
+    #cp $HOME/.config/thunar $DOTFILES/shared-config/.config
     
     # ~/.scripts
     cp -r $HOME/.scripts $DOTFILES
@@ -143,19 +143,21 @@ cp -r $HOME/.config/polybar/scripts/{rofi-poweroff-theme.sh,theme-swap-theme.sh}
 cp -r $HOME/.config/dunst $theme_config
 
 # discord
-mkdir $theme_config/discord &> /dev/null
-cp $HOME/.config/discord/custom-discord-theme.css $theme_config/discord
+#mkdir $theme_config/discord &> /dev/null
+#cp $HOME/.config/discord/custom-discord-theme.css $theme_config/discord
 
 # spicetify
-mkdir $theme_config/spicetify &> /dev/null
-cp -r $HOME/.config/spicetify/{Extracted,config.ini} $theme_config/spicetify
+#mkdir $theme_config/spicetify &> /dev/null
+#cp -r $HOME/.config/spicetify/{Extracted,config.ini} $theme_config/spicetify
 
-cp -r $HOME/.config/JetBrains $theme_config
+# Jetbrains IDEs settings
+mkdir $theme_config/JetBrains &> /dev/null
+cp -r $HOME/.config/JetBrains/IntelliJIdea2021.2 $theme_config/JetBrains
 
-mkdir $theme_config/Code\ -\ OSS &> /dev/null
-cp $HOME/.config/Code\ -\ OSS/{Cookies,Cookies-journal,languagepacks.json,machineid,rapid_render.json,storage.json,TransportSecurity} $theme_config/Code\ -\ OSS
-mkdir -p $theme_config/Code\ -\ OSS/User &> /dev/null
-cp $HOME/.config/Code\ -\ OSS/User/{keybindings.json,settings.json,syncLocalSettings.json} $theme_config/Code\ -\ OSS/User
+#mkdir $theme_config/Code\ -\ OSS &> /dev/null
+#cp $HOME/.config/Code\ -\ OSS/{Cookies,Cookies-journal,languagepacks.json,machineid,rapid_render.json,storage.json,TransportSecurity} $theme_config/Code\ -\ OSS
+#mkdir -p $theme_config/Code\ -\ OSS/User &> /dev/null
+#cp $HOME/.config/Code\ -\ OSS/User/{keybindings.json,settings.json,syncLocalSettings.json} $theme_config/Code\ -\ OSS/User
 
 mkdir $theme_config/Code &> /dev/null
 cp $HOME/.config/Code/{Cookies,Cookies-journal,languagepacks.json,machineid,rapid_render.json,storage.json,TransportSecurity} $theme_config/Code

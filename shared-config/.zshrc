@@ -180,7 +180,7 @@ alias j='java -jar'
 alias y='yay'
 alias g='git'
 alias l='exa --icons -la'
-alias ls='exa --icons'
+alias li='exa --icons'
 
 # ~/.zshrc
 alias aliases='nvim $HOME/.zshrc'

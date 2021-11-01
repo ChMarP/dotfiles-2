@@ -46,8 +46,10 @@ restart_applications () {
     sleep 0.3
     rm ~/.config/sxhkd/sxhkdrc.*
     rm ~/.config/polybar/config.*
-    killall kitty
-    nohup floating-term-bspwm.sh &
+
+    # Reload config for all kitty instances
+    pkill -SIGUSR1 kitty
+    floating-term-bspwm.sh
 }
 
 restart_applications $1
