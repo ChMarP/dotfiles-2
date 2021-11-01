@@ -120,7 +120,7 @@ export PATH="$HOME/.config/polybar/scripts:$PATH"
 export PATH="$DOTFILES/setup-scripts:$PATH"
 export PATH="/home/zodd/.local/bin:$PATH"
 export PATH="/home/zodd/Documents/git-lab/dotfiles/setup-scripts:$PATH"
-PATH=$PATH:$HOME/.config/polybar/scripts:$HOME/.scripts
+PATH=$PATH:$HOME/.config/polybar/scripts:$HOME/.scripts:$HOME/.scripts/theme-swap
 export PATH="/home/zodd/.stack/snapshots/x86_64-linux-tinfo6/fe767865424443a2eed6f45f1f52e31d92286477e7e51ee31adfa3e42e907dac/8.8.4/bin:/home/zodd/.stack/compiler-tools/x86_64-linux-tinfo6/ghc-8.8.4/bin:/home/zodd/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/bin:home/zodd/.yarn/bin:/home/zodd/.config/yarn/global/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:$PATH"
 
 export DOTFILES="$HOME/Documents/git-lab/dotfiles"
@@ -254,7 +254,7 @@ alias packages='expac -s "%-45n %m" -H M | sort -rhk 2 | nvim'
 alias classname="xprop | grep 'CLASS'"
 
 # git add, git commit, git push all my rices
-alias upload-all-rices="cd $DOTFILES/rices && find * -maxdepth 0 -type d -exec upload-rice '{}' $1 ';'"
+alias upload-all-rices="cd $DOTFILES/rices && find * -maxdepth 0 -type d -exec upload-rice '{}' ';'"
 
 # ---------------------------------------- Showcase ----------------------------------------
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function restart_applications {
+restart_applications () {
     config_name=$1
 
     # ------ kill applications ------
@@ -26,7 +26,7 @@ function restart_applications {
         bspc config gapless_monocle      true
         bspc config single_monocle       false
 
-        $HOME/.config/bspwm/autostart &
+        ~/.config/bspwm/autostart &
         xsetroot -cursor_name left_ptr &
         picom --experimental-backends &
         nitrogen --restore &
@@ -34,19 +34,19 @@ function restart_applications {
         #nohup pidof $HOME/.scripts/bspswallow || $HOME/.scripts/bspswallow &
         
         pgrep bspswallow || nohup ~/.scripts/bspswallow &
-        $HOME/.config/bspwm/autostart &
+        ~/.config/bspwm/autostart &
 
-        cp $HOME/.config/polybar/config.bspwm $HOME/.config/polybar/config
+        cp ~/.config/polybar/config.bspwm ~/.config/polybar/config
     fi
 
     /bin/neofetch --clean &
     
-    killall kitty
-    nohup $HOME/.config/polybar/scripts/restart-polybar.sh &
+    nohup ~/.config/polybar/scripts/launch-polybar.sh &
 
     sleep 0.3
-    rm $HOME/.config/sxhkd/sxhkdrc.*
-    rm $HOME/.config/polybar/config.*
+    rm ~/.config/sxhkd/sxhkdrc.*
+    rm ~/.config/polybar/config.*
+    killall kitty
     nohup floating-term-bspwm.sh &
 }
 

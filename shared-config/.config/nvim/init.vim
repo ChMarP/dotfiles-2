@@ -103,6 +103,7 @@ call plug#begin()
 " Languages support
 Plug 'neoclide/coc.nvim'
 Plug 'zodd18/vim-ocl'
+Plug 'ReedOei/vim-maude'
 
 " Functionalities
 Plug 'preservim/nerdcommenter'

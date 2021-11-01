@@ -21,7 +21,7 @@ super + e
 
 # launch/restart polybar
 ctrl + alt + p
-    ~/.config/polybar/scripts/restart-polybar.sh
+    ~/.config/polybar/scripts/launch-polybar.sh
 
 # rofi 
 super + d
