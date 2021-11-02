@@ -23,6 +23,7 @@ then
     # nvim
     cp -r $HOME/.config/nvim $DOTFILES/shared-config/.config &> /dev/null
     rm $DOTFILES/shared-config/.config/nvim/colorscheme.vim
+    rm -rf $DOTFILES/shared-config/.config/nvim/plugged/*
 
     # gedit
     mkdir -p $DOTFILES/shared-config/.local/share/gedit &> /dev/null

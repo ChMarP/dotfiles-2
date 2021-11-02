@@ -27,6 +27,9 @@ cp -rv ./shared-config/. $HOME
 # install plugins for nvim
 nvim -E -s -u "$HOME/.config/nvim/init.vim" +PlugInstall +qall
 
+# devicons for ranger
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+
 sed -i "s/$replace_user/$USER/g" $HOME/.zshrc $HOME/.config/sxhkd/sxhkdrc*
 
 [ -f $HOME/.scripts/custom-autostart ] || echo '#!/bin/bash' >> $HOME/.scripts/custom-autostart && chmod +x $HOME/.scripts/custom-autostart 
